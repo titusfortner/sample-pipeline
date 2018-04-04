@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Run Static Code Analysis') {
             steps {
+                sh "pip install -r requirements.txt"
                 sh "flake8 ."
             }
         }
