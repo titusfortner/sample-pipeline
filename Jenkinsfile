@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('Run Static Code Analysis') {
             steps {
-                echo 'Passed'
+                flake8 .
             }
         }
         stage('Run Unit Tests') {
             steps {
-                echo 'Passed'
+                pytest test_unit.py
             }
         }
         stage('Deploy Application') {
             steps {
-            	echo 'Passed'
+            	echo 'TBD'
             }
         }
         stage('Run Functional Tests') {
             steps {
-                echo 'Passed'
+                pytest test_functional.py
             }
         }
     }
