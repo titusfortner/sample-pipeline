@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Run Static Code Analysis') {
             steps {
-                flake8 .
+                sh "flake8 ."
             }
         }
         stage('Run Unit Tests') {
             steps {
-                pytest test_unit.py
+                sh "pytest test_unit.py"
             }
         }
         stage('Deploy Application') {
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Run Functional Tests') {
             steps {
-                pytest test_functional.py
+                sh "pytest test_functional.py"
             }
         }
     }
