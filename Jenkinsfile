@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Run Static Code Analysis') {
             steps {
-                echo 'Passed'
+                echo 'I made a code change'
             }
         }
         stage('Run Unit Tests') {
